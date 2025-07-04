@@ -9,14 +9,13 @@
         "preview": "astro preview",
         "astro": "astro"
     },
-    "dependencies": {
-        "@astrojs/check": "^0.9.4",
-        "astro": "^5.11.0"
-    },
+    "dependencies": {},
     "devDependencies": {
+        "@astrojs/check": "^0.9.4",
         "@astrojs/mdx": "^4.3.0",
         "@iconify-json/tabler": "^1.2.19",
         "@types/node": "^24.0.10",
+        "astro": "^5.11.0",
         "astro-icon": "^1.1.5",
         "sass": "^1.89.2",
         "typescript": "^5.8.3"
