@@ -8,7 +8,7 @@ on:
 
 env:
   # Server connection details
-  SSH_HOST: elliotreed.dev
+  SSH_HOST: elliotreed.net
   SSH_PORT: 7822
   SSH_USER: elliotre
   
