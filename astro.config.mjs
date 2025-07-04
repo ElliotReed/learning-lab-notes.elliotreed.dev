@@ -1,4 +1,25 @@
+// @ts-check
 import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
+import path from 'node:path';
+import icon from "astro-icon";
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+    experimental: {},
+    image: {
+        layout: 'constrained',
+    },
+    integrations: [
+        icon(),
+        mdx(),
+    ],
+    trailingSlash: 'always',
+    vite: {
+        resolve: {
+            alias: {
+                '@': path.resolve('./src'),
+                '@images': path.resolve('./src/assets/images'),
+            },
+        },
+    },
+});

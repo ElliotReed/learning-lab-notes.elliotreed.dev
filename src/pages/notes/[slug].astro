@@ -1,23 +1,30 @@
 ---
 import { getCollection } from "astro:content";
+
 export async function getStaticPaths() {
-    const notes = await getCollection('notes');
+    const notes = await getCollection("notes");
 
-    return notes.map(note => ({
-        params: { slug: note.slug }, props: { note },
+    return notes.map((note) => ({
+        params: { slug: note.slug },
+        props: { note },
     }));
- };
- const { note } = Astro.props;
- const { Content } = await note.render();
+}
 
- import '../styles/layouts/_note.scss';
- ---
- 
- <div class="note-container">
-  <article class="note">
-    <h1>{ note.data.title }</h1>
-    <div class="note-content-container">
-      <Content />
+import MainLayout from "@/layouts/MainLayout.astro";
+
+const { note } = Astro.props;
+const { Content } = await note.render();
+
+//  import '../styles/layouts/_note.scss';
+---
+
+<MainLayout page={{ title: note.data.title, description: "" }}>
+    <div class="note-container">
+        <article class="note">
+            <h1>{note.data.title}</h1>
+            <div class="note-content-container">
+                <Content />
+            </div>
+        </article>
     </div>
-  </article>
-</div>
+</MainLayout>

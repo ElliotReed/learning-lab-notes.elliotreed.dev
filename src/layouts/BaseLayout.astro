@@ -1,0 +1,88 @@
+---
+import "@/styles/style.scss";
+
+const site = {
+    title: "Learning Lab Notes",
+};
+
+interface Props {
+    page: {
+        title: string;
+        description?: string;
+    };
+}
+
+const { page } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="img/favicons/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="img/favicons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="img/favicons/favicon-16x16.png"
+        />
+        <link rel="manifest" href="img/favicons/site.webmanifest" />
+        <link rel="shortcut icon" href="img/favicons/favicon.ico" />
+        <meta name="apple-mobile-web-app-title" content={site.title} />
+        <meta name="application-name" content={site.title} />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta
+            name="msapplication-config"
+            content="img/favicons/browserconfig.xml"
+        />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{page.title}</title>
+    </head><description>{page.description}</description>
+
+
+    <body>
+        <slot />
+    </body>
+
+    <style is:global>
+        :root {
+            --accent: 136, 58, 234;
+            --accent-light: 224, 204, 250;
+            --accent-dark: 49, 10, 101;
+            --accent-gradient: linear-gradient(
+                45deg,
+                rgb(var(--accent)),
+                rgb(var(--accent-light)) 30%,
+                white 60%
+            );
+        }
+        html {
+            font-family: system-ui, sans-serif;
+            background: #13151a;
+        }
+        code {
+            font-family:
+                Menlo,
+                Monaco,
+                Lucida Console,
+                Liberation Mono,
+                DejaVu Sans Mono,
+                Bitstream Vera Sans Mono,
+                Courier New,
+                monospace;
+        }
+    </style>
+</html>

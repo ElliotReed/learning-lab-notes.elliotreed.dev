@@ -1,27 +1,29 @@
 ---
-import { getCollection } from 'astro:content';
-import './header.scss';
-const {site} = Astro.props;
-const allNotes = await getCollection('notes');
+import { getCollection } from "astro:content";
+
+import "./header.scss";
+
+const { site } = Astro.props;
+const allNotes = await getCollection("notes");
 ---
 
 <div class="header-container">
     <header class="site-header">
-      <img src="/img/learning-lab-notes.jpg" alt="">
-      <a href={site.title}>
-        { site.title }
-      </a>
+        <img src="/img/learning-lab-notes.jpg" alt="" />
+        <a href={"/"}>
+            {site.title}
+        </a>
     </header>
-  <!-- {console.log("allNotes",allNotes)} -->
+    <!-- {console.log("allNotes",allNotes)} -->
     <div class="note-list__container">
-      <ul class="note-list">
-        {allNotes.map((note) => (
-            <li>
-                <a href={`notes/${note.slug}`}>{ note.data.title }</a>
-            </li>
-            ))
-        }
-        
-      </ul>
+        <ul class="note-list">
+            {
+                allNotes.map((note) => (
+                    <li>
+                        <a href={`/notes/${note.slug}/`}>{note.data.title}</a>
+                    </li>
+                ))
+            }
+        </ul>
     </div>
-  </div>
+</div>
