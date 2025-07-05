@@ -1,3 +1,21 @@
 @use "./layouts/base";
 @use "./layouts/note";
 @use "syntax.scss";
+
+.copyable-code-block {
+    position: relative;
+}
+
+.copy-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: #444;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    z-index: 1;
+}

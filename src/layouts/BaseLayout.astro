@@ -52,12 +52,12 @@ const { page } = Astro.props;
         <title>{page.title}</title>
     </head><description>{page.description}</description>
 
-
     <body>
         <slot />
+        <script src="/copy-code.js" defer></script>
     </body>
 
-    <style is:global>
+    <!-- <style is:global>
         :root {
             --accent: 136, 58, 234;
             --accent-light: 224, 204, 250;
@@ -84,5 +84,7 @@ const { page } = Astro.props;
                 Courier New,
                 monospace;
         }
-    </style>
+    </style> -->
+
+
 </html>
