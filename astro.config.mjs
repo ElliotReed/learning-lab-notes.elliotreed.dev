@@ -11,6 +11,10 @@ export default defineConfig({
     image: {
         layout: 'constrained',
     },
+    integrations: [
+        icon(),
+        mdx(),
+    ],
     markdown: {
         shikiConfig: {
             theme: 'vitesse-black',
@@ -18,10 +22,6 @@ export default defineConfig({
         remarkPlugins: [[remarkToc, { heading: "contents" }]],
         rehypePlugins: [rehypeCopyButton],
     },
-    integrations: [
-        icon(),
-        mdx(),
-    ],
     trailingSlash: 'always',
     vite: {
         resolve: {

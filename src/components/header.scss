@@ -2,54 +2,56 @@
 @use '../styles/mixins';
 
 .header-container {
-  display: flex;
-  flex-direction: column;
-  width: $sidebar-header-width;
-  overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: $sidebar-header-width;
+    overflow: hidden;
+    max-height: 100%;
 }
 
 .site-header {
-  position: relative;
-
-  a {
-    position: absolute;
-    inset: 1em;
-    display: block;
-    color: $background-color;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: bold;
-    z-index: 100;
-  }
-
-  img {
     position: relative;
-    display: block;
-    width: 100%;
-  }
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: bold;
+        z-index: 100;
+
+        img {
+            display: block;
+            width: 3rem;
+            height: 5rem;
+        }
+    }
+
 }
 
 .note-list__container {
-  overflow-x: hidden;
-  overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 100%;
 }
 
 .note-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-  a {
-    display: block;
-    @include mixins.padding-box;
-    color: $link-color;
+    a {
+        display: block;
+        @include mixins.padding-box;
+        color: $link-color;
 
-    &:hover,
-    :focus {
-      color: $background-color;
-      background: $link-color;
-      font-weight: bold;
+        &:hover,
+        :focus {
+            color: $background-color;
+            background: $link-color;
+            font-weight: bold;
+        }
     }
-  }
 }

@@ -10,21 +10,22 @@ export async function getStaticPaths() {
     }));
 }
 
+import { Image } from "astro:assets";
 import MainLayout from "@/layouts/MainLayout.astro";
+import notesImage from "@images/learning-lab-notes.jpg";
 
 const { note } = Astro.props;
 const { Content } = await note.render();
 
-//  import '../styles/layouts/_note.scss';
+import "@/styles/layouts/_note.scss";
 ---
 
 <MainLayout page={{ title: note.data.title, description: "" }}>
-    <div class="note-container">
-        <article class="note">
-            <h1>{note.data.title}</h1>
-            <div class="note-content-container">
-                <Content />
-            </div>
-        </article>
-    </div>
+    <Image src={notesImage} alt="" class="note-background" />
+    <article class="note">
+        <h1>{note.data.title}</h1>
+        <div class="note-content-container">
+            <Content />
+        </div>
+    </article>
 </MainLayout>

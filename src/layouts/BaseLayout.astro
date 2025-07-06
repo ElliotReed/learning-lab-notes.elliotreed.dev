@@ -24,33 +24,34 @@ const { page } = Astro.props;
         <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="img/favicons/apple-touch-icon.png"
+            href="/images/favicons/apple-touch-icon.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="img/favicons/favicon-32x32.png"
+            href="/images/favicons/favicon-32x32.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="img/favicons/favicon-16x16.png"
+            href="/images/favicons/favicon-16x16.png"
         />
-        <link rel="manifest" href="img/favicons/site.webmanifest" />
-        <link rel="shortcut icon" href="img/favicons/favicon.ico" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="shortcut icon" href="/images/favicons/favicon.ico" />
         <meta name="apple-mobile-web-app-title" content={site.title} />
         <meta name="application-name" content={site.title} />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta
             name="msapplication-config"
-            content="img/favicons/browserconfig.xml"
+            content="/images/favicons/browserconfig.xml"
         />
         <meta name="theme-color" content="#ffffff" />
         <meta name="generator" content={Astro.generator} />
         <title>{page.title}</title>
-    </head><description>{page.description}</description>
+        <meta name="description" content={page.description} />
+    </head>
 
     <body>
         <slot />
@@ -85,6 +86,4 @@ const { page } = Astro.props;
                 monospace;
         }
     </style> -->
-
-
 </html>

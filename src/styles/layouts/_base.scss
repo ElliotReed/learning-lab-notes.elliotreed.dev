@@ -3,6 +3,14 @@
 
 
 :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(45deg,
+            rgb(var(--accent)),
+            rgb(var(--accent-light)) 30%,
+            white 60%);
+
     font-size: calc(15px + .390625vw);
     box-sizing: border-box;
 }
@@ -14,10 +22,9 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     margin: 0;
     height: 100vh;
+    height: 100svh;
     color: $body-color;
     font-family: $body-font;
     background: $background-color;

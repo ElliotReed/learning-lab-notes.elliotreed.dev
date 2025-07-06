@@ -9,6 +9,7 @@ export default function rehypeCopyButton() {
             ) {
                 node.properties ??= {};
                 const existing = node.properties?.className ?? [];
+                console.log("existing: ", existing)
                 const classList = Array.isArray(existing)
                     ? existing
                     : String(existing).split(/\s+/);
