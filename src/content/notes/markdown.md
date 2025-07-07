@@ -4,8 +4,7 @@ date: 2023-12-09
 categories: ["markdown"]
 ---
 
-- TOC
-{:toc}
+## Contents
 
 <https://www.markdownguide.org>
 

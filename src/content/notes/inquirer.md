@@ -4,5 +4,4 @@ title: "Inquirer"
 categories: ["node"]
 ---
 
-- toc
-{:toc}
+## Contents

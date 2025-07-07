@@ -4,8 +4,7 @@ title: "Javascript"
 categories: ["javascript"]
 ---
 
-- toc
-{:toc}
+## Contents
 
 ## Challenge Sites
 

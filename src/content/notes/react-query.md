@@ -4,8 +4,7 @@ date: 2023-12-07
 categories: ["react"]
 ---
 
-- TOC
-{:toc}
+## Contents
 
 ## library
 

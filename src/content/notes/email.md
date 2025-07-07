@@ -4,8 +4,7 @@ date: 2024-01-11
 categories: ["email"]
 ---
 
-- toc
-{:toc}
+## Contents
 
 ## The Plus Trick
 

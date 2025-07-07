@@ -1,6 +1,10 @@
 # build output
 dist/
 
+# Sub project folders
+docs.learning-lab-notes/
+jekyll-site/
+
 # generated types
 .astro/
 

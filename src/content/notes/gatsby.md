@@ -1,11 +1,10 @@
 ---
 title: "Gatsby"
-date: 2024-01-24
-categories: [ "react", "gatsby"]
+date: 2025-06-28
+categories: ["react", "gatsby"]
 ---
 
-- TOC
-{:toc}
+## Contents
 
 ## Concepts
 

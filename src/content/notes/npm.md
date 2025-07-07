@@ -1,11 +1,10 @@
 ---
+date: 2023-12-07
 title: "NPM"
-date: 2024-09-10
 categories: ["npm"]
 ---
 
-- TOC
-{:toc}
+## Contents
 
 ## Scripts
 

@@ -4,8 +4,7 @@ title: "WordPress"
 categories: ["wordpress"]
 ---
 
-- toc
-{:toc}
+## Contents
 
 ## Documentation
 

@@ -4,8 +4,7 @@ date: 2024-01-02
 categories: ["images"]
 ---
 
-- TOC
-{:toc}
+## Contents
 
 ```js
 =${Math.random()}

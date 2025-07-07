@@ -4,8 +4,7 @@ date: 2023-12-08
 categories: ["django"]
 ---
 
-- TOC
-{:toc}
+## Contents
 
 ## setup
 

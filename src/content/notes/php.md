@@ -4,8 +4,7 @@ title: "php"
 categories: ["php"]
 ---
 
-- toc
-{:toc}
+## Contents
 
 [Go to the php documentation site.](https://www.php.net/)
 

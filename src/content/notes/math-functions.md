@@ -4,8 +4,7 @@ title: "Math Functions"
 categories: ["math"]
 ---
 
-- toc
-{:toc}
+## Contents
 
 ## Detect if point is in circle
 

@@ -5,8 +5,7 @@ categories: ["react"]
 tags: ["react", "storybook", "prisma"]
 ---
 
-- toc
-{:toc}
+## Contents
 
 ## About
 

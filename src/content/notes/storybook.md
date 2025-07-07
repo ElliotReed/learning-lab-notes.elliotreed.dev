@@ -4,8 +4,7 @@ date: 2024-01-02
 categories: ["react"]
 ---
 
-- TOC
-{:toc}
+## Contents
 
 ## Components
 

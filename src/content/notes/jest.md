@@ -4,8 +4,7 @@ title: "Jest"
 categories: ["testing"]
 ---
 
-- toc
-{:toc}
+## Contents
 
 ## Setup
 

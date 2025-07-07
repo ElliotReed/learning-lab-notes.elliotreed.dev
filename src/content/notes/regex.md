@@ -4,8 +4,7 @@ title: "RegEx"
 categories: ["regex"]
 ---
 
-- toc
-{:toc}
+## Contents
 
 [regexr.com](https://regexr.com/)
 

@@ -4,8 +4,7 @@ date: 2024-01-02
 categories: ["css"]
 ---
 
-- TOC
-{:toc}
+## Contents
 
 ## Aria
 
@@ -30,14 +29,52 @@ As an alternative, you can use a .visually-hidden class to include content thatâ
 }
 ```
 
+## Detail
+
+Accordions can be easily created with the details element, and can be fully functional with no javasript!
+
+```html
+<details name="" class="details" open>
+    <summary></summary>
+    <!-- content goes here -->
+</details>
+```
+
+```css
+root: {
+    /* Used by detail for transition  */
+    interpolate-size: allow-keywords;
+}
+```
+
+```css
+.details {
+
+    summary {
+        cursor: pointer;
+        font-weight: bold;
+
+        &::marker {
+            /* fine for basic styling but can't be transitioned, set to content: "" and use ::before for transition. */
+            content: "ðŸ™‚"
+        }
+    }   
+
+    &::details-content {
+        display: block;   /* to override the display content default */
+        margin-inline: 2em; /* works now */
+    }
+      
+}
+```
 ## Images
 
 Standard image properties:
 
 ```css
 img {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
 ```
 
@@ -49,8 +86,8 @@ HTML
 
 ```html
 <div class="field relative">
-  <label for="email">Label</label>
-  <input type="email" name="email" placeholder="" required/>
+    <label for="email">Label</label>
+    <input type="email" name="email" placeholder="" required/>
 </div>
 ```
 
@@ -58,16 +95,16 @@ Tailwind example:
 
 ```css
 label {
-  @apply font-handwriting uppercase text-xl tracking-tighter
+    @apply font-handwriting uppercase text-xl tracking-tighter
 }
 
 label:has(+ input:placeholder-shown) {
-  @apply text-3xl absolute top-8 left-8 pointer-events-none transition-all duration-300
+    @apply text-3xl absolute top-8 left-8 pointer-events-none transition-all duration-300
 }
 
 label:has(+ input),
 label:has(+ input:focus) {
-  @apply absolute top-2 left-2 text-xl
+    @apply absolute top-2 left-2 text-xl
 }
 
 input[type="email"],
@@ -76,12 +113,12 @@ input[type="password"],
 input[type="tel"],
 input[type="text"],
 input[type="url"] {
-  @apply font-sans text-2xl h-[100px] w-full px-7 border-black border-2
+    @apply font-sans text-2xl h-[100px] w-full px-7 border-black border-2
 }
 
 /* invalid label */
 label:has(+ input:invalid:not(:placeholder-shown)) {
-  @apply text-white
+    @apply text-white
 }
 
 /* invalid input */

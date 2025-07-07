@@ -4,8 +4,7 @@ title: "Svg"
 categories: ["images"]
 ---
 
-- toc
-{:toc}
+## Contents
 
 ## Favicon
 

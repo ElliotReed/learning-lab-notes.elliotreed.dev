@@ -4,8 +4,7 @@ title: "React"
 categories: ["react"]
 ---
 
-- toc
-{:toc}
+## Contents
 
 ## Style Guide
 

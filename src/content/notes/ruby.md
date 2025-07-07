@@ -1,11 +1,10 @@
 ---
+date: 2023-12-02
 title: "Ruby"
-date: 2024-09-10
 categories: ["ruby"]
 ---
 
-- TOC
-{:toc}
+## Contents
 
 <https://www.ruby-lang.org/en/>
 

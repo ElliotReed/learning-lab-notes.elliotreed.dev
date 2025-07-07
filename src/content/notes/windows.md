@@ -4,8 +4,7 @@ title: "Windows"
 categories: ["windows"]
 ---
 
-- toc
-{:toc}
+## Contents
 
 ## Storage sense
 

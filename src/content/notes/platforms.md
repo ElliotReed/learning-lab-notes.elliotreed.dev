@@ -4,8 +4,7 @@ date: 2024-01-08
 categories: ["platforms"]
 ---
 
-- toc
-{:toc}
+## Contents
 
 ## Netlify
 

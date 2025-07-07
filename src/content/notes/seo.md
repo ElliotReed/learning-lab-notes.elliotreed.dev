@@ -4,8 +4,7 @@ date: 2024-01-07
 categories: ["seo"]
 ---
 
-- TOC
-{:toc}
+## Contents
 
 ## Description
 

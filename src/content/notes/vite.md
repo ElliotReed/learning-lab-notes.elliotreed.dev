@@ -1,11 +1,10 @@
 ---
 date: 2024-06-07
 title: "Vite"
-categories: [""]
+categories: ["build"]
 ---
 
-- toc
-{:toc}
+## Contents
 
 [Vite](https://vitejs.dev/)
 

@@ -4,7 +4,7 @@ date: 2024-01-05
 categories: ["express"]
 ---
 
-<!-- toc -->
+## Contents
 
 ## Typescript
 
@@ -12,13 +12,13 @@ categories: ["express"]
 
 Install typescript, ts-node and @types/typescript as devDependancies.
 
-```shell
+```node
 npm i -D typescript ts-node @types/typescript
 ```
 
 Create tsconfig.json using the typescript cli.
 
-```shell
+```node
 tsc --init
 ```
 

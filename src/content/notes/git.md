@@ -4,8 +4,7 @@ title: "Git"
 categories: ["version control"]
 ---
 
-- toc
-{:toc}
+## Contents
 
 ## Removing Tracked Files
 
@@ -14,6 +13,10 @@ git rm --cached [path/file(or directory)]
 ```
 
 Use the `-r` flag to recursively remove a directory's contests.
+
+## Merge
+
+
 
 ## Change a commit message
 

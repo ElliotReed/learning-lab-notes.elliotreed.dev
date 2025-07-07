@@ -1,11 +1,10 @@
 ---
 title: "GraphQL"
-date: 2027-09-10
+date: 2023-12-07
 categories: ["database"]
 ---
 
-- TOC
-{:toc}
+## Contents
 
 GraphQL's SDL syntax requires an extra `!` when a field is required,an extra `?` character when a field is not required.
 

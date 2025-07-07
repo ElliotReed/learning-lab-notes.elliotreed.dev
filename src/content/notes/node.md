@@ -1,11 +1,10 @@
 ---
+date: 2023-12-07
 title: "Nodejs"
-date: 2024-09-10
 categories: ["node"]
 ---
 
-- TOC
-{:toc}
+## Contents
 
 ## Installed Versions
 

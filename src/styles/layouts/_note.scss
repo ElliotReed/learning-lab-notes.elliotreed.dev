@@ -30,13 +30,14 @@
             max-width: 960px;
         }
 
-        #markdown-toc {
+        #contents,
+        #contents~ul {
             position: absolute;
             grid-column: 1/2;
         }
     }
 
-    #markdown-toc {
+    #contents~ul {
         list-style: none;
         padding: 1em;
         background: #333;
@@ -45,14 +46,14 @@
         width: 100%;
 
 
-        &::before {
-            content: "Contents";
-            padding-block: .2em;
-            padding-inline: 1em;
-            margin-left: -.6em;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
+        // &::before {
+        //     content: "Contents";
+        //     padding-block: .2em;
+        //     padding-inline: 1em;
+        //     margin-left: -.6em;
+        //     font-size: 1.2em;
+        //     font-weight: bold;
+        // }
 
         &>li:first-child {
             margin-top: .6em;

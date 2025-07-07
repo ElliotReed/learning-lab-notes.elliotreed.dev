@@ -6,7 +6,15 @@
         "dev": "astro dev",
         "start": "astro dev",
         "build": "astro check && astro build",
-        "preview": "astro preview"
+        "preview": "astro preview",
+        "learning-lab-notes": "node .learning-lab-notes",
+        "lln": "node .learning-lab-notes",
+        "add-note": "node .learning-lab-notes -- -n",
+        "labs": "code b:/projects/learning-lab",
+        "github": "code b:/projects/learning-lab/github-lab",
+        "node": "code b:/projects/learning-lab/node-lab",
+        "vscode": "code b:/projects/learning-lab/vscode-lab",
+        "react": "code b:/projects/learning-lab/react-lab"
     },
     "devDependencies": {
         "@astrojs/check": "^0.9.4",

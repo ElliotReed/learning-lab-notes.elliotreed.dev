@@ -4,8 +4,7 @@ date: 2024-01-02
 categories: ["express"]
 ---
 
-- TOC
-{:toc}
+## Contents
 
 [Passport](https://www.passportjs.org/)
 

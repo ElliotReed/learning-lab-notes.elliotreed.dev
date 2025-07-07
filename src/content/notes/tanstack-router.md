@@ -4,8 +4,7 @@ title: "Tanstack Router"
 categories: ["react"]
 ---
 
-- toc
-{:toc}
+## Contents
 
 ## Installation
 
