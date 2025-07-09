@@ -4,7 +4,6 @@ title: "WordPress"
 categories: ["wordpress"]
 ---
 
-## Contents
 
 ## Documentation
 

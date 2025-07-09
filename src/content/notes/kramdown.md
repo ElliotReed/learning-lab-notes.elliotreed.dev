@@ -4,7 +4,6 @@ title: "Kramdown"
 categories: ["jekyll"]
 ---
 
-## Contents
 
 <https://kramdown.gettalong.org>
 
@@ -15,5 +14,4 @@ categories: ["jekyll"]
 Using a list item seperator (*, -) before "TOC"
 
 ```kramdown
-## Contents
 ```

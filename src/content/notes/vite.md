@@ -4,7 +4,6 @@ title: "Vite"
 categories: ["build"]
 ---
 
-## Contents
 
 [Vite](https://vitejs.dev/)
 

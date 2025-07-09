@@ -4,7 +4,6 @@ title: "Math Functions"
 categories: ["math"]
 ---
 
-## Contents
 
 ## Detect if point is in circle
 

@@ -124,7 +124,6 @@ Fencing syntax works also?
 Using a list item seperator (*, -) before "TOC"
 
 ```kramdown
-## Contents
 ```
 
 When using jekyll's liquid syntax, the syntax symbols need to be escaped with "raw"

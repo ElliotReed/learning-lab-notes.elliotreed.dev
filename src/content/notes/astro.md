@@ -4,7 +4,6 @@ title: "Astro"
 categories: ["astro"]
 ---
 
-## Contents
 
 ## Environment Variables
 

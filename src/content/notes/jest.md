@@ -4,7 +4,6 @@ title: "Jest"
 categories: ["testing"]
 ---
 
-## Contents
 
 ## Setup
 

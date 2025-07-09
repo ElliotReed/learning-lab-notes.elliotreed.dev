@@ -4,7 +4,6 @@ title: "Information architecture"
 categories: ["architecture"]
 ---
 
-## Contents
 
 ## Overview
 

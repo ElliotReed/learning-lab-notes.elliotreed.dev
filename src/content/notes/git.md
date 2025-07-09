@@ -4,7 +4,6 @@ title: "Git"
 categories: ["version control"]
 ---
 
-## Contents
 
 ## Removing Tracked Files
 

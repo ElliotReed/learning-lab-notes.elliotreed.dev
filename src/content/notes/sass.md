@@ -6,7 +6,6 @@ categories: ["css"]
 
 ![sass](https://sass-lang.com/assets/img/logos/logo.svg)
 
-## Contents
 
 ## Documentaion
 

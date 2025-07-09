@@ -23,7 +23,6 @@
         "@types/node": "^24.0.10",
         "astro": "^5.11.0",
         "astro-icon": "^1.1.5",
-        "remark-toc": "^9.0.0",
         "sass": "^1.89.2",
         "typescript": "^5.8.3",
         "unist-util-visit": "^5.0.0"

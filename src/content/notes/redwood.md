@@ -5,7 +5,6 @@ categories: ["react"]
 tags: ["react", "storybook", "prisma"]
 ---
 
-## Contents
 
 ## About
 

@@ -4,7 +4,6 @@ title: "The <head> element"
 categories: ["html"]
 ---
 
-## Contents
 
 ```js
 interface Props {

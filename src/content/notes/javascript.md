@@ -4,7 +4,6 @@ title: "Javascript"
 categories: ["javascript"]
 ---
 
-## Contents
 
 ## Challenge Sites
 

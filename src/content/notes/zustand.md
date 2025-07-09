@@ -4,7 +4,6 @@ title: "Zustand"
 categories: ["react"]
 ---
 
-## Contents
 
 Via ChatGPT
 

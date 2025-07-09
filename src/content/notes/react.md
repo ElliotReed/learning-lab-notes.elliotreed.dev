@@ -4,7 +4,6 @@ title: "React"
 categories: ["react"]
 ---
 
-## Contents
 
 ## Style Guide
 

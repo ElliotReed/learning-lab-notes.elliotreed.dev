@@ -31,49 +31,9 @@
         }
 
         #contents,
-        #contents~ul {
+        #contents+ul {
             position: absolute;
             grid-column: 1/2;
-        }
-    }
-
-    #contents~ul {
-        list-style: none;
-        padding: 1em;
-        background: #333;
-        font-size: .85em;
-        border-radius: 6px;
-        width: 100%;
-
-
-        // &::before {
-        //     content: "Contents";
-        //     padding-block: .2em;
-        //     padding-inline: 1em;
-        //     margin-left: -.6em;
-        //     font-size: 1.2em;
-        //     font-weight: bold;
-        // }
-
-        &>li:first-child {
-            margin-top: .6em;
-        }
-
-        a {
-            display: block;
-            padding-block: .5em;
-            padding-inline: 1em;
-            margin-block: .2em;
-        }
-
-        ul {
-            margin-top: .5em;
-            list-style: none;
-            padding-left: .5em;
-
-            li {
-                background: #222;
-            }
         }
     }
 }

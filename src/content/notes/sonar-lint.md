@@ -4,7 +4,6 @@ title: "Sonar Lint"
 categories: ["linter"]
 ---
 
-## Contents
 
 [Taken from "baeldung.com/sonar-exclude-violations"](https://www.baeldung.com/sonar-exclude-violations)
 

@@ -4,7 +4,6 @@ date: 2023-12-07
 categories: ["database"]
 ---
 
-## Contents
 
 GraphQL's SDL syntax requires an extra `!` when a field is required,an extra `?` character when a field is not required.
 

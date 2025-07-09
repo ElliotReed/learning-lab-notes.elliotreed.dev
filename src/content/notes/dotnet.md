@@ -4,7 +4,6 @@ title: ".NET"
 categories: [".net"]
 ---
 
-## Contents
 
 ## .NET Components
 

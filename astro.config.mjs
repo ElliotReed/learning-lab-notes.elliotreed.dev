@@ -3,8 +3,8 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import path from 'node:path';
 import icon from "astro-icon";
-import remarkToc from 'remark-toc';
-import rehypeCopyButton from './src/utils/rehype-copy-button';
+import rehypeCopyButton from './src/plugins/rehype-copy-button';
+import remarkCollectHeadings from './src/plugins/remark-collect-headings';
 
 export default defineConfig({
     experimental: {},
@@ -13,13 +13,14 @@ export default defineConfig({
     },
     integrations: [
         icon(),
-        mdx(),
+        mdx({
+            remarkPlugins: [remarkCollectHeadings]
+        }),
     ],
     markdown: {
         shikiConfig: {
             theme: 'vitesse-black',
         },
-        remarkPlugins: [[remarkToc, { heading: "contents" }]],
         rehypePlugins: [rehypeCopyButton],
     },
     trailingSlash: 'always',

@@ -4,7 +4,6 @@ title: "Ruby"
 categories: ["ruby"]
 ---
 
-## Contents
 
 <https://www.ruby-lang.org/en/>
 

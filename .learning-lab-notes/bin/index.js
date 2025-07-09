@@ -32,7 +32,6 @@ title: "${capitalize(title)}"
 categories: ["${categories.toLowerCase()}"]
 ---
 
-## Contents
 `
     return noteContent;
 }

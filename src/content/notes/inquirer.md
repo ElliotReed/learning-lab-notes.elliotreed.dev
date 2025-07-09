@@ -4,4 +4,3 @@ title: "Inquirer"
 categories: ["node"]
 ---
 
-## Contents

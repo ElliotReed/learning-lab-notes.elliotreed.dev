@@ -1,5 +1,13 @@
 ---
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import MainLayout from "@/layouts/MainLayout.astro";
+import Sidebar from "@/components/Sidebar.astro";
+import notesImage from "@images/learning-lab-notes.jpg";
+
+import "@/styles/layouts/_note.scss";
+
+import type { RenderResultWithToc } from "@/types/content";
 
 export async function getStaticPaths() {
     const notes = await getCollection("notes");
@@ -10,18 +18,16 @@ export async function getStaticPaths() {
     }));
 }
 
-import { Image } from "astro:assets";
-import MainLayout from "@/layouts/MainLayout.astro";
-import notesImage from "@images/learning-lab-notes.jpg";
-
 const { note } = Astro.props;
-const { Content } = await note.render();
-
-import "@/styles/layouts/_note.scss";
+const { Content, headings, toc } = (await note.render()) as RenderResultWithToc;
+const tocData = headings ?? toc ?? [];
 ---
 
 <MainLayout page={{ title: note.data.title, description: "" }}>
-    <Image src={notesImage} alt="" class="note-background" />
+    <!-- <Image src={notesImage} alt="" class="note-background" /> -->
+
+    <Sidebar toc={tocData} />
+
     <article class="note">
         <h1>{note.data.title}</h1>
         <div class="note-content-container">

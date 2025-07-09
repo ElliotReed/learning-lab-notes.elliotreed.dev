@@ -4,7 +4,6 @@ title: "Windows"
 categories: ["windows"]
 ---
 
-## Contents
 
 ## Storage sense
 

@@ -4,7 +4,6 @@ date: 2023-12-09
 categories: ["markdown"]
 ---
 
-## Contents
 
 <https://www.markdownguide.org>
 

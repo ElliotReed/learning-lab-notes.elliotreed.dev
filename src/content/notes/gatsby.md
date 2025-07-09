@@ -4,7 +4,6 @@ date: 2025-06-28
 categories: ["react", "gatsby"]
 ---
 
-## Contents
 
 ## Concepts
 

@@ -4,7 +4,6 @@ title: "Java"
 categories: ["java"]
 ---
 
-## Contents
 
 ## Setup
 
