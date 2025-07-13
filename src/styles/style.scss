@@ -1,6 +1,6 @@
 @use "./layouts/base";
-@use "./layouts/note";
-@use "syntax.scss";
+@use "./layouts/data-opener";
+@use "./abstracts/syntax.scss";
 
 .copyable-code-block {
     position: relative;

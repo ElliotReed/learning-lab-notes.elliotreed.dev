@@ -3,7 +3,7 @@
 ![pencil taking notes](/assets/img/learning-lab-notes.jpg)
 for more efficient note taking
 
-This site is built with Jekyll to organize my notes.
+This site is built with astro to organize my notes.
 
 ## Learning Lab Notes CLI
 

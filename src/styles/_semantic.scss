@@ -1,0 +1,14 @@
+@use "./primitives" as *;
+
+$clr-primary: $color-red;
+$clr-zebra: $color-grey;
+$link-color: $color-yellow;
+
+$body-background-color: $color-black;
+$body-color: $color-white;
+$body-font: $font;
+
+$border-radius: .5rem;
+
+$sidebar-header-width: 15rem;
+$data-opener-width: 1.5rem;

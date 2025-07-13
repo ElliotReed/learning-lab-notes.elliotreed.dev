@@ -4,43 +4,70 @@ import type { TocItem } from "@/plugins/remark-collect-headings";
 const { toc } = Astro.props;
 ---
 
-<aside class="sidebar">
-    <ul>
-        {
-            toc.map((heading: TocItem) => {
-                return (
-                    <li>
-                        <a href={`#${heading.slug}`}>{heading.text}</a>
-                    </li>
-                );
-            })
-        }
-    </ul>
-</aside>
+<div class="sidebar-wrapper">
+    <aside class="sidebar">
+        <ul>
+            {
+                toc.map((heading: TocItem) => {
+                    return (
+                        <li>
+                            <a href={`#${heading.slug}`}>{heading.text}</a>
+                        </li>
+                    );
+                })
+            }
+        </ul>
+    </aside>
+</div>
 
-<style>
-    .sidebar ul {
-        list-style: none;
-        padding: 1em;
-        background: #333;
-        font-size: 0.85em;
-        border-radius: 6px;
-        width: 100%
+<style lang="scss">
+    @use "@/styles/primitives" as *;
+    @use "@/styles/semantic" as *;
+    @use "@/styles/abstracts/mixins" as *;
 
-        a {
-            display: block;
-            padding-block: 0.5em;
-            padding-inline: 1em;
-            margin-block: 0.2em;
+    .sidebar-wrapper {
+        @media screen and (min-width: 768px) {
+            grid-column: 2 / -1;
         }
 
-        ul {
-            margin-top: 0.5em;
-            list-style: none;
-            padding-left: 0.5em;
+        .sidebar {
+            margin-block: $space-md;
+            @media screen and (min-width: 768px) {
+                max-height: 92vh;
+                overflow: hidden;
+                overflow-y: auto;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                width: 250px;
+            }
 
-            li {
-                background: #222;
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                background: #333;
+                font-size: $fs-sm;
+                border-radius: $border-radius;
+
+                a {
+                    display: block;
+                    @include padding-box;
+
+                    &:hover {
+                        background: $color-yellow;
+                        color: $color-grey;
+                    }
+
+                    // ul {
+                    //     margin-top: 0.5em;
+                    //     list-style: none;
+                    //     padding-left: 0.5em;
+                    //     li {
+                    //         background: #222;
+                    //     }
+                    // }
+                }
             }
         }
     }

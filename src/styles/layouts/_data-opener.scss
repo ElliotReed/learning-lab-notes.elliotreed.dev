@@ -1,0 +1,28 @@
+@use "@/styles/semantic" as *;
+@use "@/styles/abstracts/mixins" as *;
+@use "@/styles/abstracts/variables" as *;
+
+button[data-opener] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: $data-opener-width;
+    height: 100%;
+    background: $clr-primary;
+    border: none;
+    color: $body-color;
+    outline: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    // i {
+    //     pointer-events: none;
+    // }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}

@@ -1,5 +1,5 @@
-@use "@/styles/variables" as *;
-@use "@/styles/mixins" as *;
+@use "@/styles/semantic" as *;
+@use "@/styles/abstracts/mixins" as *;
 
 
 :root {
@@ -24,62 +24,11 @@
 body {
     margin: 0;
     height: 100vh;
-    // min-height: 100svh;
+    // height: 100svh;
     color: $body-color;
     font-family: $body-font;
-    background: $background-color;
+    background: $body-background-color;
     overflow: hidden;
-}
-
-.site-container {
-    display: flex;
-    width: calc(100% + #{$sidebar-header-width} + #{$data-opener-width});
-    height: 100%;
-    transition: transform .3s ease-in-out;
-    transform: translateX(-$sidebar-header-width);
-    overflow: hidden;
-
-    &.opened {
-        transform: translateX(0);
-    }
-
-    @media screen and (min-width: 768px) {
-        display: grid;
-        grid-template-columns: $sidebar-header-width 1fr;
-        transform: translateX(0);
-        width: 100%;
-    }
-
-    [data-opener] {
-        color: $body-color;
-        width: $data-opener-width;
-        height: 100%;
-        margin: 0;
-        background: #555;
-        border: none;
-
-        &:hover {
-            cursor: pointer;
-        }
-
-        i {
-            pointer-events: none;
-        }
-
-        @media screen and (min-width: 768px) {
-            display: none;
-        }
-    }
-}
-
-.content {
-    width: calc(100% - #{$sidebar-header-width} - #{$data-opener-width} - 1em);
-    height: 100%;
-    overflow: hidden;
-
-    @media screen and (min-width: 768px) {
-        width: 100%;
-    }
 }
 
 figure {
@@ -88,4 +37,32 @@ figure {
 
 a {
     color: $link-color;
+}
+
+main {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid $clr-zebra;
+
+    thead {
+        th {
+
+            background-color: $clr-primary;
+            @include padding-box;
+        }
+    }
+
+    tbody {
+        td {
+            @include padding-box;
+        }
+
+        tr:nth-child(even) {
+            background-color: $clr-zebra;
+        }
+    }
 }

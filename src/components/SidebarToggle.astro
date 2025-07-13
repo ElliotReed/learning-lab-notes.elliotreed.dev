@@ -1,0 +1,111 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+
+import beakerManImage from "@images/beaker-man.png";
+
+const { site } = Astro.props;
+const allNotes = await getCollection("notes");
+const sortedNotes = allNotes.sort((a, b) => {
+    return a.data.title.localeCompare(b.data.title);
+});
+---
+
+<div class="sidebar-toggle-container">
+    <div class="sidebar-container">
+        <header class="site-header">
+            <a href={"/"}>
+                <Image src={beakerManImage} alt="Open book with blank pages" />
+                {site.title}
+            </a>
+        </header>
+
+        <div class="note-list__container">
+            <ul class="note-list">
+                {
+                    sortedNotes.map((note) => (
+                        <li>
+                            <a href={`/notes/${note.slug}/`}>
+                                {note.data.title}
+                            </a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </div>
+
+    <button data-opener draggable="true">
+        <Icon name="tabler:chevron-right" id="toggle-icon" />
+    </button>
+
+    <script is:inline src="/scripts/sidebar-toggle.js"></script>
+</div>
+
+<style lang="scss">
+    @use "@/styles/semantic" as *;
+    @use "@/styles/abstracts/mixins" as *;
+    @use "@/styles/abstracts/variables" as *;
+
+    .sidebar-toggle-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        overflow: hidden;
+        max-height: 100%;
+    }
+
+    .sidebar-container {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 100%;
+    }
+
+    .site-header {
+        position: relative;
+        background: $clr-zebra;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+            z-index: 100;
+
+            img {
+                display: block;
+                width: 2.5rem;
+                height: 3rem;
+            }
+        }
+    }
+
+    .note-list__container {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        max-height: 100%;
+    }
+
+    .note-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        a {
+            display: block;
+            @include padding-box;
+            color: $link-color;
+
+            &:hover,
+            :focus {
+                color: $body-background-color;
+                background: $link-color;
+                font-weight: bold;
+            }
+        }
+    }
+</style>

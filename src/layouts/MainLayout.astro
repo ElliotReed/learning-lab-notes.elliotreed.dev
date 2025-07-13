@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import Header from "@/components/Header.astro";
+import SidebarToggle from "@/components/SidebarToggle.astro";
 import Footer from "@/components/Footer.astro";
 
 interface Props {
@@ -19,36 +19,40 @@ const site = {
 
 <BaseLayout page={{ title: page.title, description: page.description }}>
     <div class="site-container" data-site-container>
-        <Header site={site} />
+        <SidebarToggle site={site} />
 
-        <button data-opener draggable="true">
-            <i class="fa fa-chevron-right"></i>
-        </button>
-
-        <script>
-            const siteContainer = document.querySelector(
-                "[data-site-container]",
-            );
-            const button = document.querySelector("[data-opener]");
-
-            function toggleFunction(e: MouseEvent) {
-                if (e.target === button) {
-                    siteContainer!.classList.toggle("opened");
-                } else {
-                    siteContainer!.classList.remove("opened");
-                }
-
-                if (siteContainer!.classList.contains("opened")) {
-                    button!.innerHTML = `<i class="fa fa-chevron-left"></i>`;
-                } else {
-                    button!.innerHTML = `<i class="fa fa-chevron-right"></i>`;
-                }
-            }
-            document.addEventListener("click", toggleFunction);
-        </script>
-        <main class="note-container">
+        <main class="main">
             <slot />
         </main>
         <Footer site={site} />
     </div>
 </BaseLayout>
+
+<style lang="scss">
+    @use "@/styles/semantic" as *;
+    @use "@/styles/abstracts/mixins" as *;
+    @use "@/styles/abstracts/variables" as *;
+
+    .site-container {
+        height: 100vh;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-$sidebar-header-width + $data-opener-width);
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: $sidebar-header-width 1fr;
+        grid-template-rows: 1fr auto;
+        width: calc(100% + #{$sidebar-header-width});
+
+        &.opened {
+            transform: translateX(0);
+        }
+
+        @media screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: $sidebar-header-width 1fr;
+            grid-template-rows: 1fr auto;
+            transform: translateX(0);
+            width: 100%;
+        }
+    }
+</style>

@@ -5,8 +5,6 @@ import MainLayout from "@/layouts/MainLayout.astro";
 import Sidebar from "@/components/Sidebar.astro";
 import notesImage from "@images/learning-lab-notes.jpg";
 
-import "@/styles/layouts/_note.scss";
-
 import type { RenderResultWithToc } from "@/types/content";
 
 export async function getStaticPaths() {
@@ -25,13 +23,56 @@ const tocData = headings ?? toc ?? [];
 
 <MainLayout page={{ title: note.data.title, description: "" }}>
     <!-- <Image src={notesImage} alt="" class="note-background" /> -->
+    <div class="note-page">
+        <Sidebar toc={tocData} />
 
-    <Sidebar toc={tocData} />
-
-    <article class="note">
-        <h1>{note.data.title}</h1>
-        <div class="note-content-container">
-            <Content />
-        </div>
-    </article>
+        <article class="note">
+            <h1>{note.data.title}</h1>
+            <div class="note-content-container">
+                <Content />
+            </div>
+        </article>
+    </div>
 </MainLayout>
+
+<style lang="scss">
+    @use "@/styles/primitives" as *;
+    @use "@/styles/semantic" as *;
+
+    .note-page {
+        width: calc(100% - #{$data-opener-width / 2});
+        padding-inline: $space-md;
+
+        @media screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 250px;
+            gap: $space-md;
+            width: 100%;
+        }
+    }
+
+    .note-background {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        opacity: 0.05;
+    }
+
+    .note {
+        overflow: hidden;
+
+        @media screen and (min-width: 768px) {
+            grid-column: 1/2;
+            grid-row: 1/ -1;
+        }
+    }
+
+    .note-content-container {
+        position: relative; // placeholder
+
+        @media screen and (min-width: 768px) {
+            position: relative; // placeholder
+        }
+    }
+</style>

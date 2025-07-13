@@ -1,0 +1,6 @@
+@use '@/styles/semantic' as *;
+
+pre {
+    padding: 1em;
+    border-radius: $border-radius;
+}
