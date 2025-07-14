@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import SidebarToggle from "@/components/SidebarToggle.astro";
-import Footer from "@/components/Footer.astro";
 
 interface Props {
     page: {
@@ -24,7 +23,6 @@ const site = {
         <main class="main">
             <slot />
         </main>
-        <Footer site={site} />
     </div>
 </BaseLayout>
 
@@ -34,14 +32,14 @@ const site = {
     @use "@/styles/abstracts/variables" as *;
 
     .site-container {
-        height: 100vh;
-        transition: transform 0.3s ease-in-out;
-        transform: translateX(-$sidebar-header-width + $data-opener-width);
-        overflow: hidden;
         display: grid;
         grid-template-columns: $sidebar-header-width 1fr;
         grid-template-rows: 1fr auto;
-        width: calc(100% + #{$sidebar-header-width});
+        width: calc(100% + #{$sidebar-header-width} - #{$data-opener-width});
+        height: 100vh;
+        overflow-x: hidden;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-$sidebar-header-width + $data-opener-width);
 
         &.opened {
             transform: translateX(0);
@@ -51,8 +49,8 @@ const site = {
             display: grid;
             grid-template-columns: $sidebar-header-width 1fr;
             grid-template-rows: 1fr auto;
-            transform: translateX(0);
             width: 100%;
+            transform: translateX(0);
         }
     }
 </style>

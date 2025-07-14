@@ -22,7 +22,7 @@ const tocData = headings ?? toc ?? [];
 ---
 
 <MainLayout page={{ title: note.data.title, description: "" }}>
-    <!-- <Image src={notesImage} alt="" class="note-background" /> -->
+    <Image src={notesImage} alt="" class="note-background" />
     <div class="note-page">
         <Sidebar toc={tocData} />
 
@@ -40,13 +40,13 @@ const tocData = headings ?? toc ?? [];
     @use "@/styles/semantic" as *;
 
     .note-page {
-        width: calc(100% - #{$data-opener-width / 2});
         padding-inline: $space-md;
 
         @media screen and (min-width: 768px) {
             display: grid;
-            grid-template-columns: 1fr 250px;
             gap: $space-md;
+            grid-template-columns: 1fr 250px;
+            grid-template-rows: calc(100vh - (#{$space-md}* 2)) auto;
             width: 100%;
         }
     }
@@ -57,10 +57,11 @@ const tocData = headings ?? toc ?? [];
         height: 100vh;
         object-fit: cover;
         opacity: 0.05;
+        z-index: -1; // allows container scrolling on mobile
     }
 
     .note {
-        overflow: hidden;
+        overflow-x: hidden;
 
         @media screen and (min-width: 768px) {
             grid-column: 1/2;
@@ -69,7 +70,7 @@ const tocData = headings ?? toc ?? [];
     }
 
     .note-content-container {
-        position: relative; // placeholder
+        // overflow-x: hidden;
 
         @media screen and (min-width: 768px) {
             position: relative; // placeholder
