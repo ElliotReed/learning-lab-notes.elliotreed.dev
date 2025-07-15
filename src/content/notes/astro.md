@@ -4,6 +4,18 @@ title: "Astro"
 categories: ["astro"]
 ---
 
+## Initialize
+
+Run:
+
+```bash
+npm create astro@latest
+```
+
+It will guide you through choicies for setup.
+
+Select Starlight for a documentation site.
+
 
 ## Environment Variables
 

@@ -4,7 +4,6 @@ date: 2023-12-07
 categories: ["github"]
 ---
 
-
 ## installation
 
 ## cli
@@ -81,8 +80,16 @@ To verify the added keys, run:
 ssh-add -l
 ```
 To display the key values in the console, run:
+
+Public key (on the host)
+
 ```bash
 cat ~/.ssh/github-actions-key.pub
+```
+
+Private key for Github
+
+```bash
 cat ~/.ssh/github-actions-key
 ```
 
@@ -168,7 +175,11 @@ cat ~/.ssh/github-actions-key
 
 1. Went to **GitHub → Repository → Settings → Secrets and variables → Actions**.
 2. Created a new secret **`DEPLOY_SSH_KEY`**.
-3. Pasted the **private SSH key** (`~/.ssh/github-actions-key`).
+3. Pasted the **private SSH key** 
+
+```bash
+~/.ssh/github-actions-key
+```
 
 ---
 
