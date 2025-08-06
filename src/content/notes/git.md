@@ -32,3 +32,13 @@ git push --force branch-name
 What the command does is overwriting the most recent commit with the new one.
 
 The -m option allows you to write the new message on the command line without opening an editor session.
+
+## Commit Message Style
+
+Various commit message styles.
+
+- `feat: use versioningTag for auro-helpers` [auro-formkit](https://github.com/AlaskaAirlines/auro-formkit)
+
+- `feat(lit): make disabling dev mode warnings simpler (#4901)` [lit](https://github.com/lit)
+
+- `Remove dynamic naming for DEV_MODE polyfill support functions. (#2152)` [lit](https://github.com/lit)
